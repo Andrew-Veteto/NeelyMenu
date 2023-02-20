@@ -1,0 +1,107 @@
+/** @format */
+
+body{
+  background-color: #7c6e52;
+}
+
+
+/* This is when small */
+nav {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100vh;
+  border: 1px;
+  padding: 1px;
+  background-color: #242424;
+  text-align: center;
+  transform: translateY(-101%);
+  transition: transform 0.3s ease;
+}
+
+div a i:first-child{
+  color: white;
+  float: left;
+}
+
+nav:target {
+  transform: translateY(0);
+}
+
+nav > ul {
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.close{
+  z-index: 1000;
+  float: left;
+}
+
+/* this is the bird */
+ul > a:first-child{
+  float: left;
+  /* position: absolute; */
+  padding-top: 4px;
+  font-size: 20px;
+}
+
+i{
+  color: #7c6e52;
+}
+
+nav > ul a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: larger;
+  padding: 2px;
+  margin: 2px;
+  color: #7c6e52;
+  display: block;
+}
+
+nav > ul a:hover {
+  background-color: white;
+}
+
+#MrsNeely{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3em;
+}
+
+#MrsNeely img{
+  width: 300px;
+  height: 300px;
+}
+
+#MrsNeely h3{
+  width: 300px;
+}
+
+/* This is when big */
+@media screen and (min-width: 700px) {
+
+  nav {
+    position: static;
+    height: auto;
+    transform: translateY(0);
+    width: 100%;
+  }
+
+  .hamburger,
+  .close {
+    display: none;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+}
